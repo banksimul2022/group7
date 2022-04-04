@@ -1,0 +1,7 @@
+api/node_modules/
+
+api/.env
+
+bankautomat/build/
+
+bankautomat/*.user
