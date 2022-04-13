@@ -2,21 +2,39 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    kate.cpp \
+    loppu.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    nosto.cpp \
+    pin.cpp \
+    pinv.cpp \
+    valikko.cpp
 
 HEADERS += \
-    mainwindow.h
+    kate.h \
+    loppu.h \
+    mainwindow.h \
+    nosto.h \
+    pin.h \
+    pinv.h \
+    valikko.h
 
 FORMS += \
-    mainwindow.ui
+    kate.ui \
+    loppu.ui \
+    mainwindow.ui \
+    nosto.ui \
+    pin.ui \
+    pinv.ui \
+    valikko.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
