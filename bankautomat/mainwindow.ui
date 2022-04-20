@@ -6,24 +6,125 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>557</width>
-    <height>302</height>
+    <width>396</width>
+    <height>375</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="btnkortti">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTextEdit" name="textEditsaldo">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QTextEdit" name="textEdittili">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="0">
+     <widget class="QPushButton" name="btn200">
       <property name="text">
-       <string>Syötä kortti :--)</string>
+       <string>200</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>banksimulpro2000</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Tilitapahtumat</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0">
+     <widget class="QPushButton" name="btn100">
+      <property name="text">
+       <string>100</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="0">
+     <widget class="QPushButton" name="btn500">
+      <property name="text">
+       <string>500</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Nosto</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Saldo</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0">
+     <widget class="QPushButton" name="btn20">
+      <property name="text">
+       <string>20</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="0">
+     <widget class="QPushButton" name="btnlogout">
+      <property name="text">
+       <string>Kirjaudu Ulos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="0">
+     <widget class="QPushButton" name="btnlogin">
+      <property name="text">
+       <string>Kirjaudu Sisään</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0">
+     <widget class="QPushButton" name="btn50">
+      <property name="text">
+       <string>50</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>396</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menubanksimulpro2000">
+    <property name="title">
+     <string>banksimulpro2000</string>
+    </property>
+   </widget>
+   <addaction name="menubanksimulpro2000"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

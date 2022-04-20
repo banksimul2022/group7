@@ -9,32 +9,17 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    kate.cpp \
-    loppu.cpp \
+    kirjaudu.cpp \
     main.cpp \
-    mainwindow.cpp \
-    nosto.cpp \
-    pin.cpp \
-    pinv.cpp \
-    valikko.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    kate.h \
-    loppu.h \
-    mainwindow.h \
-    nosto.h \
-    pin.h \
-    pinv.h \
-    valikko.h
+    kirjaudu.h \
+    mainwindow.h
 
 FORMS += \
-    kate.ui \
-    loppu.ui \
-    mainwindow.ui \
-    nosto.ui \
-    pin.ui \
-    pinv.ui \
-    valikko.ui
+    kirjaudu.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

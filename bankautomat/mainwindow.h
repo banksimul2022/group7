@@ -1,14 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "pin.h"
-#include "ui_pin.h"
-#include "valikko.h"
-#include "pinv.h"
-#include "nosto.h"
-#include "loppu.h"
-#include "kate.h"
-#include "QMainWindow"
+#include <QMainWindow>
+#include "kirjaudu.h"
+#include "ui_kirjaudu.h"
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,10 +19,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btnkortti_clicked();
+    void on_btnlogin_clicked();
+
+    void on_btnlogout_clicked();
 
 private:
     Ui::MainWindow *ui;
-    pin * ppin;
+    kirjaudu * pkirjaudu;
+
 };
 #endif // MAINWINDOW_H

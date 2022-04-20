@@ -1,25 +1,29 @@
-#include "pin.h"
-#include <QWidget>
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "MainWindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ppin = new pin;
+    pkirjaudu= new kirjaudu;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete ppin;
+    delete pkirjaudu;
+}
+
+void MainWindow::on_btnlogin_clicked()
+{
+    pkirjaudu->show();
 }
 
 
-void MainWindow::on_btnkortti_clicked()
+void MainWindow::on_btnlogout_clicked()
 {
-    ppin->show();
+    QMessageBox::information(this, tr("banksimulpro2000"), tr ("Kirjauduit ulos, ota kortti"));
 }
 
