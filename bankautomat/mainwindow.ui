@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>396</width>
-    <height>375</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
     <item row="20" column="0">
      <widget class="QPushButton" name="btn200">
       <property name="text">
-       <string>200</string>
+       <string>200€</string>
       </property>
      </widget>
     </item>
@@ -53,14 +53,14 @@
     <item row="19" column="0">
      <widget class="QPushButton" name="btn100">
       <property name="text">
-       <string>100</string>
+       <string>100€</string>
       </property>
      </widget>
     </item>
     <item row="21" column="0">
      <widget class="QPushButton" name="btn500">
       <property name="text">
-       <string>500</string>
+       <string>500€</string>
       </property>
      </widget>
     </item>
@@ -81,7 +81,7 @@
     <item row="17" column="0">
      <widget class="QPushButton" name="btn20">
       <property name="text">
-       <string>20</string>
+       <string>20€</string>
       </property>
      </widget>
     </item>
@@ -102,7 +102,7 @@
     <item row="18" column="0">
      <widget class="QPushButton" name="btn50">
       <property name="text">
-       <string>50</string>
+       <string>50€</string>
       </property>
      </widget>
     </item>
@@ -114,7 +114,7 @@
      <x>0</x>
      <y>0</y>
      <width>396</width>
-     <height>17</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menubanksimulpro2000">

@@ -1,6 +1,7 @@
 #include "kirjaudu.h"
 #include "ui_kirjaudu.h"
 #include <QMessageBox>
+#include <QString>
 
 kirjaudu::kirjaudu(QWidget *parent) :
     QWidget(parent),
