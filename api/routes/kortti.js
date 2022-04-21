@@ -13,7 +13,7 @@ router.get('/:idkortti?',
       }
     });
   } else {
-    kortti.getAll(function(err, dbResult) {
+    kortti.get(function(err, dbResult) {
       if (err) {
         response.json(err);
       } else {
@@ -26,23 +26,22 @@ router.get('/:idkortti?',
 
 router.post('/', 
 function(request, response) {
-  kortti.add(request.body, function(err, dbResult) {
+  kortti.add(request.body, function(err, count) {
     if (err) {
       response.json(err);
     } else {
-      response.json(request.body);
+      response.json(request.body); 
     }
   });
 });
 
-
 router.delete('/:idkortti', 
 function(request, response) {
-  kortti.delete(request.params.idkortti, function(err, dbResult) {
+  kortti.delete(request.params.idkortti, function(err, count) {
     if (err) {
       response.json(err);
     } else {
-      response.json(dbResult);
+      response.json(count);
     }
   });
 });
