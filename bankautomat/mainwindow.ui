@@ -37,14 +37,14 @@
      </widget>
     </item>
     <item row="22" column="0">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="labelpro">
       <property name="text">
        <string>banksimulpro2000</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="labeltili">
       <property name="text">
        <string>Tilitapahtumat</string>
       </property>
@@ -65,14 +65,14 @@
      </widget>
     </item>
     <item row="7" column="0">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="labelnosto">
       <property name="text">
        <string>Nosto</string>
       </property>
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="labelsaldo">
       <property name="text">
        <string>Saldo</string>
       </property>
@@ -114,7 +114,7 @@
      <x>0</x>
      <y>0</y>
      <width>396</width>
-     <height>20</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menubanksimulpro2000">

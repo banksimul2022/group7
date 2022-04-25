@@ -16,18 +16,14 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Tunnus</string>
+     <property name="maximumSize">
+      <size>
+       <width>388</width>
+       <height>240</height>
+      </size>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="lineEditpin"/>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Pin</string>
+      <string>Syötä Pin-koodi</string>
      </property>
     </widget>
    </item>
