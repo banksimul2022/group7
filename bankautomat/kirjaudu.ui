@@ -28,7 +28,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdittunnus"/>
+    <widget class="QLineEdit" name="lineEditpin"/>
    </item>
    <item>
     <widget class="QPushButton" name="btnOk">

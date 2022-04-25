@@ -5,6 +5,8 @@
 #include "kirjaudu.h"
 #include "ui_kirjaudu.h"
 #include <QMessageBox>
+#include <QSerialPort>
+#include <QSerialPortInfo>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QMessageBox>
+#include <QSerialPort>
+#include <QSerialPortInfo>
 
 namespace Ui {
 class kirjaudu;
