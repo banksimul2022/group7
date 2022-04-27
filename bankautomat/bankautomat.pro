@@ -27,3 +27,8 @@ QT += serialport
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32: LIBS += -L$$PWD/../RFID/rfid/build/debug/ -lrfid
+
+INCLUDEPATH += $$PWD/../RFID/rfid
+DEPENDPATH += $$PWD/../RFID/rfid

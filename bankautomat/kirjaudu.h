@@ -4,7 +4,10 @@
 #include <QWidget>
 #include <QMessageBox>
 #include <QSerialPort>
-#include <QSerialPortInfo>
+#include <QtSerialPort/QSerialPortInfo>
+#include <QObject>
+#include <QDebug>
+#include <QString>
 
 namespace Ui {
 class kirjaudu;

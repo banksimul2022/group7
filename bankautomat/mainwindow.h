@@ -6,7 +6,11 @@
 #include "ui_kirjaudu.h"
 #include <QMessageBox>
 #include <QSerialPort>
-#include <QSerialPortInfo>
+#include <QtSerialPort/QSerialPortInfo>
+#include <QObject>
+#include <QDebug>
+#include <QString>
+#include "rfid.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +28,16 @@ private slots:
     void on_btnlogin_clicked();
 
     void on_btnlogout_clicked();
+
+    void on_btn20_clicked();
+
+    void on_btn50_clicked();
+
+    void on_btn100_clicked();
+
+    void on_btn200_clicked();
+
+    void on_btn500_clicked();
 
 private:
     Ui::MainWindow *ui;
