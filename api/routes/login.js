@@ -1,37 +1,37 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const login = require('../models/login_model');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
 router.post('/', 
   function(request, response) {
-    if(request.body.tunnus && request.body.pin){
-      const idkortti = request.body.tunnus;
-      const pin = request.body.pin;
-        login.checkPassword(idkortti, function(dbError, dbResult) {
+    if(request.body.username && request.body.password){
+      const user = request.body.username;
+      const pass = request.body.password;
+      
+        login.checkPassword(user, function(dbError, dbResult) {
           if(dbError){
             response.json(dbError);
           }
           else{
             if (dbResult.length > 0) {
-              console.log('pin on'+pin.values);
-              console.log('dbresultpin on'+dbResult[0].pin.values);
-              bcrypt.compare(pin,dbResult[0].pin, function(err,compareResult) {
+              bcrypt.compare(pass,dbResult[0].password, function(err,compareResult) {
                 if(compareResult) {
-                  console.log("Oikein");
-                  response.send(true);
+                  console.log("succes");
+                  const token = generateAccessToken({ username: user });
+                  response.send(token);
                 }
                 else {
-                    console.log("Väärä pin");
+                    console.log("wrong password");
                     response.send(false);
                 }			
               }
               );
             }
             else{
-              console.log("Käyttäjää ei ole olemassa");
+              console.log("user does not exists");
               response.send(false);
             }
           }
@@ -39,7 +39,7 @@ router.post('/',
         );
       }
     else{
-      console.log("tunnus tai pin puuttuu");
+      console.log("username or password missing");
       response.send(false);
     }
   }
@@ -47,8 +47,7 @@ router.post('/',
 
 function generateAccessToken(username) {
   dotenv.config();
-  return jwt.sign(username, process.env.MY_TOKEN, { expiresIn: '18000s' });
+  return jwt.sign(username, process.env.MY_TOKEN, { expiresIn: '1800s' });
 }
-
 
 module.exports=router;
