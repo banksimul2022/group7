@@ -10,6 +10,9 @@
 #include <QString>
 #include "pindll.h"
 #include "logindialog.h"
+#include <QJsonDocument>
+#include <QtNetwork>
+#include <QNetworkAccessManager>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +27,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void asiakasKorttiGetSlot(QNetworkReply *reply); // näitä perkeleesti perjantaina
+
     void on_btnlogin_clicked();
 
     void on_btnlogout_clicked();

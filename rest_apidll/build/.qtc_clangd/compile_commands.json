@@ -9,7 +9,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-QpZDds\\clang-uiheader-AxcUva",
+        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-sePfwR\\clang-uiheader-gAzdwG",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -29,11 +29,14 @@
         "-DMINGW_HAS_SECURE_API",
         "-DREST_APIDLL_LIBRARY",
         "-DQT_QML_DEBUG",
+        "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "C:\\Projekti\\group7\\rest_apidll",
+        "C:\\Projekti\\group7\\rest_apiDLL",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include",
+        "-I",
+        "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtNetwork",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtCore",
         "-I",
@@ -63,10 +66,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Projekti\\group7\\rest_apidll\\rest_apidll.cpp"
+        "C:\\Projekti\\group7\\rest_apiDLL\\rest_apidll.cpp"
     ],
     "directory": "C:/Projekti/group7/rest_apidll/build/.qtc_clangd",
-    "file": "C:/Projekti/group7/rest_apidll/rest_apidll.cpp"
+    "file": "C:/Projekti/group7/rest_apiDLL/rest_apidll.cpp"
 },
 {
     "arguments": [
@@ -78,7 +81,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-QpZDds\\clang-uiheader-AxcUva",
+        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-sePfwR\\clang-uiheader-gAzdwG",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -98,11 +101,14 @@
         "-DMINGW_HAS_SECURE_API",
         "-DREST_APIDLL_LIBRARY",
         "-DQT_QML_DEBUG",
+        "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "C:\\Projekti\\group7\\rest_apidll",
+        "C:\\Projekti\\group7\\rest_apiDLL",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include",
+        "-I",
+        "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtNetwork",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtCore",
         "-I",
@@ -132,10 +138,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Projekti\\group7\\rest_apidll\\rest_apidll_global.h"
+        "C:\\Projekti\\group7\\rest_apiDLL\\rest_apidll_global.h"
     ],
     "directory": "C:/Projekti/group7/rest_apidll/build/.qtc_clangd",
-    "file": "C:/Projekti/group7/rest_apidll/rest_apidll_global.h"
+    "file": "C:/Projekti/group7/rest_apiDLL/rest_apidll_global.h"
 },
 {
     "arguments": [
@@ -147,7 +153,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-QpZDds\\clang-uiheader-AxcUva",
+        "C:\\Users\\Juuso\\AppData\\Local\\Temp\\QtCreator-sePfwR\\clang-uiheader-gAzdwG",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -167,11 +173,14 @@
         "-DMINGW_HAS_SECURE_API",
         "-DREST_APIDLL_LIBRARY",
         "-DQT_QML_DEBUG",
+        "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "C:\\Projekti\\group7\\rest_apidll",
+        "C:\\Projekti\\group7\\rest_apiDLL",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include",
+        "-I",
+        "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtNetwork",
         "-I",
         "C:\\Qt\\5.15.0\\mingw81_32\\include\\QtCore",
         "-I",
@@ -201,9 +210,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Projekti\\group7\\rest_apidll\\rest_apidll.h"
+        "C:\\Projekti\\group7\\rest_apiDLL\\rest_apidll.h"
     ],
     "directory": "C:/Projekti/group7/rest_apidll/build/.qtc_clangd",
-    "file": "C:/Projekti/group7/rest_apidll/rest_apidll.h"
+    "file": "C:/Projekti/group7/rest_apiDLL/rest_apidll.h"
 }
 ]

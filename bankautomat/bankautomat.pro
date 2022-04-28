@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +18,6 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-QT += serialport
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -29,3 +28,8 @@ win32: LIBS += -L$$PWD/../pinDLL/build/debug/ -lpindll
 
 INCLUDEPATH += $$PWD/../pinDLL
 DEPENDPATH += $$PWD/../pinDLL
+
+win32: LIBS += -L$$PWD/../rest_apiDLL/build/debug/ -lrest_apidll
+
+INCLUDEPATH += $$PWD/../rest_apiDLL
+DEPENDPATH += $$PWD/../rest_apiDLL
