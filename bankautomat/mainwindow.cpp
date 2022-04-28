@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "kirjaudu.h"
 #include <QMessageBox>
 #include <QString>
 #include <QSerialPort>
@@ -10,18 +9,20 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    pkirjaudu= new kirjaudu;
+    pindll = new Pindll;
+    connect(pindll->plogindialog, SIGNAL(loginsignal(QString)),
+            this, SLOT(loginslot(QString)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete pkirjaudu;
+    delete pindll;
 }
 
 void MainWindow::on_btnlogin_clicked()
 {
-    pkirjaudu->show();
+    pindll->login();
 }
 
 
@@ -59,4 +60,9 @@ void MainWindow::on_btn200_clicked()
 void MainWindow::on_btn500_clicked()
 {
     QMessageBox::information(this, tr("banksimulpro2000"), tr ("Nostit 500€"));
+}
+
+void MainWindow::loginslot(QString t)
+{
+    qDebug() <<"mainwindow"+ t;
 }

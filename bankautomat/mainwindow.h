@@ -2,15 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "kirjaudu.h"
-#include "ui_kirjaudu.h"
 #include <QMessageBox>
 #include <QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QObject>
 #include <QDebug>
 #include <QString>
-#include "rfid.h"
+#include "pindll.h"
+#include "logindialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,9 +38,11 @@ private slots:
 
     void on_btn500_clicked();
 
+    void loginslot (QString);
+
 private:
     Ui::MainWindow *ui;
-    kirjaudu * pkirjaudu;
+    Pindll * pindll;
 
 };
 #endif // MAINWINDOW_H

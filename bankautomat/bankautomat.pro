@@ -9,16 +9,13 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    kirjaudu.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
-    kirjaudu.h \
     mainwindow.h
 
 FORMS += \
-    kirjaudu.ui \
     mainwindow.ui
 
 QT += serialport
@@ -28,7 +25,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32: LIBS += -L$$PWD/../RFID/rfid/build/debug/ -lrfid
+win32: LIBS += -L$$PWD/../pinDLL/build/debug/ -lpindll
 
-INCLUDEPATH += $$PWD/../RFID/rfid
-DEPENDPATH += $$PWD/../RFID/rfid
+INCLUDEPATH += $$PWD/../pinDLL
+DEPENDPATH += $$PWD/../pinDLL
