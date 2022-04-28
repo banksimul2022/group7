@@ -34,14 +34,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 app.use(cors());
 
-//const asiakasRouter = require('./routes/asiakas');
-//const korttiRouter = require('./routes/kortti');
+const asiakasRouter = require('./routes/asiakas');
+const korttiRouter = require('./routes/kortti');
 const loginRouter = require('./routes/login');
+const tiliRouter = require('./routes/tili');
+const tilitapahtumatRouter = require('./routes/tilitapahtumat');
 
 // routes
 app.use('/login', loginRouter);
-//app.use('/kortti', korttiRouter);
+app.use('/kortti', korttiRouter);
 // app.use(authenticateToken);
-// app.use('/asiakas', asiakasRouter);
+app.use('/asiakas', asiakasRouter);
+app.use('/tili', tiliRouter);
+app.use('/tilitapahtumat', tilitapahtumatRouter);
 
 module.exports = app;

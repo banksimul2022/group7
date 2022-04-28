@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const kortti = require('../models/kortti_model');
+const user = require('../models/kortti_model');
 
-router.get('/:idkortti?',
+router.get('/:id?',
  function(request, response) {
-  if (request.params.idkortti) {
-    kortti.getByidkortti(request.params.idkortti, function(err, dbResult) {
+  if (request.params.id) {
+    user.getById(request.params.id, function(err, dbResult) {
       if (err) {
         response.json(err);
       } else {
@@ -13,7 +13,7 @@ router.get('/:idkortti?',
       }
     });
   } else {
-    kortti.get(function(err, dbResult) {
+    user.get(function(err, dbResult) {
       if (err) {
         response.json(err);
       } else {
@@ -22,11 +22,9 @@ router.get('/:idkortti?',
     });
   }
 });
-
-
 router.post('/', 
 function(request, response) {
-  kortti.add(request.body, function(err, count) {
+  user.add(request.body, function(err, count) {
     if (err) {
       response.json(err);
     } else {
@@ -35,9 +33,9 @@ function(request, response) {
   });
 });
 
-router.delete('/:idkortti', 
+router.delete('/:id', 
 function(request, response) {
-  kortti.delete(request.params.idkortti, function(err, count) {
+  user.delete(request.params.id, function(err, count) {
     if (err) {
       response.json(err);
     } else {
@@ -47,9 +45,9 @@ function(request, response) {
 });
 
 
-router.put('/:idkortti', 
+router.put('/:id', 
 function(request, response) {
-  kortti.update(request.params.idkortti, request.body, function(err, dbResult) {
+  user.update(request.params.id, request.body, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
