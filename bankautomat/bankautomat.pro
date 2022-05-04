@@ -24,12 +24,21 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32: LIBS += -L$$PWD/../pinDLL/build/debug/ -lpindll
 
-INCLUDEPATH += $$PWD/../pinDLL
-DEPENDPATH += $$PWD/../pinDLL
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../pindll/build/release/ -lpindll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../pindll/build/debug/ -lpindll
 
-win32: LIBS += -L$$PWD/../rest_apiDLL/build/debug/ -lrest_apidll
+INCLUDEPATH += $$PWD/../pindll
+DEPENDPATH += $$PWD/../pindll
 
-INCLUDEPATH += $$PWD/../rest_apiDLL
-DEPENDPATH += $$PWD/../rest_apiDLL
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../rest_apidll/build/release/ -lrest_apidll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../rest_apidll/build/debug/ -lrest_apidll
+
+INCLUDEPATH += $$PWD/../rest_apidll
+DEPENDPATH += $$PWD/../rest_apidll
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../oamk_work/serialport_dll/build/release/ -lserialport_dll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../oamk_work/serialport_dll/build/debug/ -lserialport_dll
+
+INCLUDEPATH += $$PWD/../../../../oamk_work/serialport_dll
+DEPENDPATH += $$PWD/../../../../oamk_work/serialport_dll

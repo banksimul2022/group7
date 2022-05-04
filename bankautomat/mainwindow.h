@@ -13,6 +13,7 @@
 #include <QJsonDocument>
 #include <QtNetwork>
 #include <QNetworkAccessManager>
+#include "serialport_dll.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +26,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+public slots:
+    void vastaanotaid(QByteArray);
+
+
 
 private slots:
     void asiakasKorttiGetSlot(QNetworkReply *reply); // näitä perkeleesti perjantaina
@@ -48,6 +54,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Pindll * pindll;
+    Serialport_dll * serialportDLL;
+
+
 
 };
 #endif // MAINWINDOW_H

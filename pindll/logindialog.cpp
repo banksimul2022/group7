@@ -16,7 +16,7 @@ loginDialog::~loginDialog()
 
 void loginDialog::on_buttonBox_accepted()
 {
-    qDebug() << "Juustis on buustis";
+    qDebug() << "pinkoodi annettu";
     QString t = ui->lineEditpin->text();
     emit loginsignal(t);
 }

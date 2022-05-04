@@ -3,6 +3,8 @@
 #include <QMessageBox>
 #include <QString>
 #include <QSerialPort>
+#include <qdebug.h>
+#include "logindialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,13 +14,37 @@ MainWindow::MainWindow(QWidget *parent)
     pindll = new Pindll;
     connect(pindll->plogindialog, SIGNAL(loginsignal(QString)),
             this, SLOT(loginslot(QString)));
+    serialportDLL = new Serialport_dll(this);
+
+
+    connect(serialportDLL, SIGNAL(lahetaid(QByteArray)), this,
+            SLOT(vastaanotaid(QByteArray)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     delete pindll;
+    delete serialportDLL;
 }
+
+void MainWindow::vastaanotaid(QByteArray korttiid)
+{
+    qDebug()<<korttiid;
+
+    if  (korttiid == "0500CA9B7D" or "0500CA9DDA" ){
+        pindll->login();
+    }
+
+    else {
+        qDebug()<<"buu";
+
+    }
+
+}
+
+
+
 
 void MainWindow::asiakasKorttiGetSlot(QNetworkReply *reply)
 {

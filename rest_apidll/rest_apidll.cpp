@@ -12,7 +12,7 @@ Rest_apidll::~Rest_apidll()
     delete getManager;
 }
 
-void Rest_apidll::getAsiakasKortti(QString korttiId, QString pinkoodi)
+void Rest_apidll::getAsiakasKortti(QString korttiId, QString pin)
 {
     QString site_url="http://localhost:3000/kortti" + korttiId + "/";
     qDebug() << "URL = " + site_url;
@@ -28,6 +28,6 @@ void Rest_apidll::getAsiakasKortti(QString korttiId, QString pinkoodi)
 
 void Rest_apidll::setWebToken(QString w)
 {
-    webtoken = w;
+    w=webtoken;
 }
 
