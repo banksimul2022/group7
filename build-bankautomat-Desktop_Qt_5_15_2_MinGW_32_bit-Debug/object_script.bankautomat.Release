@@ -1,0 +1,15 @@
+release/kate.o
+release/loppu.o
+release/main.o
+release/mainwindow.o
+release/nosto.o
+release/pin.o
+release/pinv.o
+release/valikko.o
+release/moc_kate.o
+release/moc_loppu.o
+release/moc_mainwindow.o
+release/moc_nosto.o
+release/moc_pin.o
+release/moc_pinv.o
+release/moc_valikko.o

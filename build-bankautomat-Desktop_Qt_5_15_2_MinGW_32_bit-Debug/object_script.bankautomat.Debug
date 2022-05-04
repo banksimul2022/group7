@@ -1,0 +1,15 @@
+debug/kate.o
+debug/loppu.o
+debug/main.o
+debug/mainwindow.o
+debug/nosto.o
+debug/pin.o
+debug/pinv.o
+debug/valikko.o
+debug/moc_kate.o
+debug/moc_loppu.o
+debug/moc_mainwindow.o
+debug/moc_nosto.o
+debug/moc_pin.o
+debug/moc_pinv.o
+debug/moc_valikko.o
